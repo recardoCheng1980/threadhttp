@@ -11,6 +11,8 @@
 #include <netdb.h>
 #include <ctype.h>
 #include <time.h>
+#include <signal.h> 
+
 #include "http_parser.h"
 #include "uthash.h"
 #include "curlthread.h"
@@ -79,25 +81,25 @@ uint32_t SESSION_TRACKER=0;
 
 void log_print(char* logline)
 {
-  if(SESSION_TRACKER==0) {
-    if (fp) {
-      fclose(fp);
-      fp=NULL;
-    }
-    system("mv /tmp/uhttpd.log /tmp/uhttpd.log.bak 2>/dev/null");
-    fp=fopen ("/tmp/uhttpd.log","w+");
-  }
+  //if(SESSION_TRACKER==0) {
+  //  if (fp) {
+  //    fclose(fp);
+  //    fp=NULL;
+  //  }
+  //  system("mv /tmp/uhttpd.log /tmp/uhttpd.log.bak 2>/dev/null");
+  //  fp=fopen ("/tmp/uhttpd.log","w+");
+  //}
 
-  if (fp==NULL)
-    return;
+  //if (fp==NULL)
+  //  return;
 
-  fprintf(fp ,"%s\n", logline);
-  fflush(fp);
-  SESSION_TRACKER++;
+  //fprintf(fp ,"%s\n", logline);
+  //fflush(fp);
+  //SESSION_TRACKER++;
 
-  if (SESSION_TRACKER > 30000) {
-    SESSION_TRACKER=0;
-  }
+  //if (SESSION_TRACKER > 30000) {
+  //  SESSION_TRACKER=0;
+  //}
 }
 
 char *strfind(char *haystack, int hslen, const char *needle, int ndlen)
@@ -435,7 +437,9 @@ void updateMac(int fd) {
   char cmd[128]= {0};
   memset(cmd, 0x0, sizeof(cmd));
   snprintf(cmd, sizeof(cmd)-1, "arp -a -n %s | awk '{printf $4}'", client_ip);
+
   client_struct *s=NULL, *tmp = NULL;
+
   HASH_FIND_STR( client_list, client_ip, s); 
   if (!s) {
     if (do_sys_command(cmd)) {
@@ -481,6 +485,16 @@ int read_from_client (int filedes, char* buffer, int msgsize)
   }
 }
 
+/* Signal Handler for SIGINT */
+void sigintHandler(int sig_num) 
+{ 
+    /* Reset handler to catch SIGINT next time. 
+       Refer http://en.cppreference.com/w/c/program/signal */
+    signal(SIGINT, sigintHandler); 
+    printf("\n Cannot be terminated using Ctrl+C \n"); 
+    fflush(stdout); 
+} 
+
 int main (int argc, char **argv)
 {
   int sock;
@@ -489,6 +503,8 @@ int main (int argc, char **argv)
   int i;
   size_t size;
   int opt;
+
+  //signal(SIGINT, sigintHandler); 
 
   while( (opt = getopt(argc, argv, "a:p:n:N:r:")) > 0) {
     switch (opt) {
@@ -524,6 +540,7 @@ int main (int argc, char **argv)
     exit (EXIT_FAILURE);
   }
 
+
   /* Initialize the set of active sockets. */
   FD_ZERO (&active_readfd_set);
   FD_SET (sock, &active_readfd_set);
@@ -531,6 +548,9 @@ int main (int argc, char **argv)
 
   FD_ZERO (&active_writefd_set);
   //FD_SET (sock, &active_writefd_set);
+
+
+  curl_global_init(CURL_GLOBAL_DEFAULT);
 
   while (1) {
     struct timeval tv;
@@ -549,16 +569,16 @@ int main (int argc, char **argv)
     ret=select (FD_SETSIZE, &readfd_set, &writefd_set, NULL, &tv);
 
     if (ret==-1) {
-      log_print("select error, exit");
+      printf("select error, exit\n");
       sleep(1);
       exit (EXIT_FAILURE);
     }
     else if (ret==0) {
-      log_print("select continue");
+      printf("select continue\n");
       continue;
     }
     else {
-      log_print("select fd");
+      printf("select fd\n");
       /* Service all the sockets with input pending. */
       for (i = 0; i < FD_SETSIZE; ++i) {
         if (FD_ISSET (i, &readfd_set)) {
@@ -570,7 +590,7 @@ int main (int argc, char **argv)
             size = sizeof (clientname);
             new = accept (sock, (struct sockaddr *) &clientname, &size);
             if (new < 0) {
-              log_print("accept error");
+              printf("accept error\n");
               //exit (EXIT_FAILURE);
             }
             client_id[new]=client_counter++;
@@ -614,7 +634,6 @@ int main (int argc, char **argv)
             }
             else { //original connection is closed
               printf("client id is different, fd:%d, resp.fd:%d, client_id[resp.fd]:%d, resp.client_id:%d\n", i, resp.fd, client_id[resp.fd], resp.client_id );
-              exit(1);
             }
             close(i);
             FD_CLR (i, &active_readfd_set);
@@ -634,18 +653,18 @@ int main (int argc, char **argv)
               client_id[i]=0;
             }
             else {
-              log_print("http header parse start");
+              printf("http header parse start\n");
               int httpRet=http_header_parse(i, buffer, read_size);
 
               if (httpRet<0) {
-                log_print("http header parse failure over");
+                printf("http header parse failure over\n");
                 FD_CLR (i, &active_readfd_set);
                 FD_CLR (i, &active_writefd_set);
                 close(i);
                 socket_type[i]=0;
                 client_id[i]=0;
               } else {
-                log_print("http header parse success over");
+                printf("http header parse success over\n");
 
                 updateMac(i);
                 snprintf(tData[i].mac, sizeof(tData[i].mac), "%s", mac);
@@ -695,6 +714,7 @@ int main (int argc, char **argv)
 
       }//for loop
     }//select 
-
   }//while
+
+  curl_global_cleanup();
 }

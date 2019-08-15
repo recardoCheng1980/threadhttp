@@ -59,8 +59,8 @@ size_t writefunc(void *ptr, size_t size, size_t nmemb, curlString *s)
   memcpy(s->ptr+s->len, ptr, size*nmemb);
   s->ptr[new_len] = '\0';
   s->len = new_len;
-  //printf ("%s", s->ptr);
-  //printf ("==============\n") ;
+  printf ("%s", s->ptr);
+  printf ("==============\n") ;
 
   return size*nmemb;
 }
@@ -73,22 +73,35 @@ void* curl_entry(void* param)
   
   memcpy(&pData, param, sizeof(threadData));
 
-  //printf("before thread, mac:%s, fd:%d, client_id:%d\n", pData.mac, pData.fd, pData.client_id);
 
-  curl_global_init(CURL_GLOBAL_DEFAULT);
+  printf("curlthread start\n");
+  //curl_global_init(CURL_GLOBAL_DEFAULT);
+
   curl = curl_easy_init();
   if(curl) {
     curlString s;
     init_string(&s);
 
-    //curl_easy_setopt(curl, CURLOPT_URL, "https://example.com/");
-    curl_easy_setopt(curl, CURLOPT_URL, "https://35.229.214.234:1568/");
+#if 1
+    curl_easy_setopt(curl, CURLOPT_URL, "http://35.229.214.234:8080/");
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &s);
+    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 1L);
+    curl_easy_setopt(curl, CURLOPT_NOSIGNAL, (long)1);
+    res = curl_easy_perform(curl);
+#else
+
+    curl_easy_setopt(curl, CURLOPT_URL, "https://35.229.214.234:1568/");
+//    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
+//    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &s);
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
     curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
-    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 5L);
+//    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 1L);
+//    curl_easy_setopt(curl, CURLOPT_NOSIGNAL, (long)1);
     res = curl_easy_perform(curl);
+#endif
+
+
 
     if (res == CURLE_OK) {
       //printf("==============\n");
@@ -99,8 +112,10 @@ void* curl_entry(void* param)
 
     /* always cleanup */
     curl_easy_cleanup(curl);
+    printf("curlthread end\n");
   }   
-  curl_global_cleanup();
+
+  //curl_global_cleanup();
 
   cli_conn(&pData); 
   //printf("after thread, mac:%s, fd:%d, client_id:%d\n", pData->mac, pData->fd, pData->client_id);
