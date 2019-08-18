@@ -1,0 +1,2586 @@
+Determining if the function connect exists in the socket;dl failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1583132557/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1583132557.dir/build.make CMakeFiles/cmTryCompileExec1583132557.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1583132557.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTryCompileExec1583132557.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1583132557
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1583132557.dir/link.txt --verbose=1
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=connect    CMakeFiles/cmTryCompileExec1583132557.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1583132557 -rdynamic -lsocket -ldl 
+/usr/bin/ld: cannot find -lsocket
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1583132557] Error 1
+make: *** [cmTryCompileExec1583132557/fast] Error 2
+
+
+Determining if files ldap.h;lber.h;ldap_ssl.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3639615187/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3639615187.dir/build.make CMakeFiles/cmTryCompileExec3639615187.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3639615187.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec3639615187.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:4:22: fatal error: ldap_ssl.h: No such file or directory
+ #include <ldap_ssl.h>
+                      ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3639615187.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec3639615187/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <ldap_ssl.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;ldapssl.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3544217135/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3544217135.dir/build.make CMakeFiles/cmTryCompileExec3544217135.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3544217135.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec3544217135.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:4:21: fatal error: ldapssl.h: No such file or directory
+ #include <ldapssl.h>
+                     ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3544217135.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec3544217135/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <ldapssl.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/filio.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec473870280/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec473870280.dir/build.make CMakeFiles/cmTryCompileExec473870280.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec473870280.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec473870280.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:6:23: fatal error: sys/filio.h: No such file or directory
+ #include <sys/filio.h>
+                       ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec473870280.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec473870280/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/filio.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/sockio.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3085077020/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3085077020.dir/build.make CMakeFiles/cmTryCompileExec3085077020.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3085077020.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec3085077020.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:12:24: fatal error: sys/sockio.h: No such file or directory
+ #include <sys/sockio.h>
+                        ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3085077020.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec3085077020/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/sockio.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;sys/utime.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1747357929/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1747357929.dir/build.make CMakeFiles/cmTryCompileExec1747357929.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1747357929.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec1747357929.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:17:23: fatal error: sys/utime.h: No such file or directory
+ #include <sys/utime.h>
+                       ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1747357929.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec1747357929/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <sys/utime.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;crypto.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec346951124/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec346951124.dir/build.make CMakeFiles/cmTryCompileExec346951124.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec346951124.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec346951124.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:21:20: fatal error: crypto.h: No such file or directory
+ #include <crypto.h>
+                    ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec346951124.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec346951124/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <crypto.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;des.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2328202634/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2328202634.dir/build.make CMakeFiles/cmTryCompileExec2328202634.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2328202634.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec2328202634.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:21:17: fatal error: des.h: No such file or directory
+ #include <des.h>
+                 ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2328202634.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec2328202634/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <des.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;idn-free.h;ifaddrs.h;io.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2673134921/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2673134921.dir/build.make CMakeFiles/cmTryCompileExec2673134921.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2673134921.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec2673134921.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:26:16: fatal error: io.h: No such file or directory
+ #include <io.h>
+                ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2673134921.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec2673134921/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <io.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;idn-free.h;ifaddrs.h;krb.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec113168012/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec113168012.dir/build.make CMakeFiles/cmTryCompileExec113168012.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec113168012.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec113168012.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:26:17: fatal error: krb.h: No such file or directory
+ #include <krb.h>
+                 ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec113168012.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec113168012/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <krb.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;idn-free.h;ifaddrs.h;libgen.h;limits.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;pem.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec616313617/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec616313617.dir/build.make CMakeFiles/cmTryCompileExec616313617.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec616313617.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec616313617.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:33:17: fatal error: pem.h: No such file or directory
+ #include <pem.h>
+                 ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec616313617.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec616313617/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <pem.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;idn-free.h;ifaddrs.h;libgen.h;limits.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;rsa.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2497702247/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2497702247.dir/build.make CMakeFiles/cmTryCompileExec2497702247.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2497702247.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec2497702247.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:35:17: fatal error: rsa.h: No such file or directory
+ #include <rsa.h>
+                 ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2497702247.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec2497702247/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <rsa.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;idn-free.h;ifaddrs.h;libgen.h;limits.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;ssl.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1872348827/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1872348827.dir/build.make CMakeFiles/cmTryCompileExec1872348827.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1872348827.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec1872348827.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:38:17: fatal error: ssl.h: No such file or directory
+ #include <ssl.h>
+                 ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1872348827.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec1872348827/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <ssl.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;idn-free.h;ifaddrs.h;libgen.h;limits.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;stdbool.h;stdint.h;stdio.h;stdlib.h;string.h;strings.h;stropts.h;termio.h;termios.h;time.h;tld.h;unistd.h;utime.h;x509.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec32166075/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec32166075.dir/build.make CMakeFiles/cmTryCompileExec32166075.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec32166075.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec32166075.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:51:18: fatal error: x509.h: No such file or directory
+ #include <x509.h>
+                  ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec32166075.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec32166075/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <x509.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;idn-free.h;ifaddrs.h;libgen.h;limits.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;stdbool.h;stdint.h;stdio.h;stdlib.h;string.h;strings.h;stropts.h;termio.h;termios.h;time.h;tld.h;unistd.h;utime.h;process.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3435952866/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3435952866.dir/build.make CMakeFiles/cmTryCompileExec3435952866.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3435952866.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec3435952866.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:51:21: fatal error: process.h: No such file or directory
+ #include <process.h>
+                     ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3435952866.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec3435952866/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <process.h>
+
+
+int main(){return 0;}
+
+Determining if files ldap.h;lber.h;stdio.h;inttypes.h;sys/ioctl.h;sys/param.h;sys/poll.h;sys/resource.h;sys/select.h;sys/socket.h;sys/stat.h;sys/time.h;sys/types.h;sys/uio.h;sys/un.h;alloca.h;arpa/inet.h;arpa/tftp.h;assert.h;err.h;errno.h;fcntl.h;idn-free.h;ifaddrs.h;libgen.h;limits.h;locale.h;net/if.h;netdb.h;netinet/in.h;netinet/tcp.h;poll.h;pwd.h;setjmp.h;sgtty.h;signal.h;stdbool.h;stdint.h;stdio.h;stdlib.h;string.h;strings.h;stropts.h;termio.h;termios.h;time.h;tld.h;unistd.h;utime.h;stddef.h;dlfcn.h;malloc.h;memory.h;netinet/if_ether.h;stdint.h;sockio.h exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4177434454/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4177434454.dir/build.make CMakeFiles/cmTryCompileExec4177434454.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4177434454.dir/CheckIncludeFiles.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec4177434454.dir/CheckIncludeFiles.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckIncludeFiles.c:57:20: fatal error: sockio.h: No such file or directory
+ #include <sockio.h>
+                    ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec4177434454.dir/CheckIncludeFiles.c.o] Error 1
+make: *** [cmTryCompileExec4177434454/fast] Error 2
+
+Source:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sockio.h>
+
+
+int main(){return 0;}
+
+Determining size of __int64 failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec393962629/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec393962629.dir/build.make CMakeFiles/cmTryCompileExec393962629.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec393962629.dir/SIZEOF___INT64.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec393962629.dir/SIZEOF___INT64.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CheckTypeSize/SIZEOF___INT64.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CheckTypeSize/SIZEOF___INT64.c:17:22: error: '__int64' undeclared here (not in a function)
+ #define SIZE (sizeof(__int64))
+                      ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CheckTypeSize/SIZEOF___INT64.c:19:12: note: in expansion of macro 'SIZE'
+   ('0' + ((SIZE / 10000)%10)),
+            ^
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec393962629.dir/SIZEOF___INT64.c.o] Error 1
+make: *** [cmTryCompileExec393962629/fast] Error 2
+
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CheckTypeSize/SIZEOF___INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the stricmp exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2906861940/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2906861940.dir/build.make CMakeFiles/cmTryCompileExec2906861940.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2906861940.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec2906861940.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: 'stricmp' undeclared (first use in this function)
+   return ((int*)(&stricmp))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2906861940.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec2906861940/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef stricmp
+  return ((int*)(&stricmp))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strcmpi exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3111601885/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3111601885.dir/build.make CMakeFiles/cmTryCompileExec3111601885.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3111601885.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec3111601885.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: 'strcmpi' undeclared (first use in this function)
+   return ((int*)(&strcmpi))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3111601885.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec3111601885/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strcmpi
+  return ((int*)(&strcmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strncmpi exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3767858747/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3767858747.dir/build.make CMakeFiles/cmTryCompileExec3767858747.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3767858747.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec3767858747.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: 'strncmpi' undeclared (first use in this function)
+   return ((int*)(&strncmpi))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3767858747.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec3767858747/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strncmpi
+  return ((int*)(&strncmpi))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the inet_ntoa_r exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3537314000/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3537314000.dir/build.make CMakeFiles/cmTryCompileExec3537314000.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3537314000.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec3537314000.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: 'inet_ntoa_r' undeclared (first use in this function)
+   return ((int*)(&inet_ntoa_r))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3537314000.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec3537314000/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef inet_ntoa_r
+  return ((int*)(&inet_ntoa_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the closesocket exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec178603208/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec178603208.dir/build.make CMakeFiles/cmTryCompileExec178603208.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec178603208.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec178603208.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: 'closesocket' undeclared (first use in this function)
+   return ((int*)(&closesocket))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec178603208.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec178603208/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef closesocket
+  return ((int*)(&closesocket))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the getpass_r exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec563697775/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec563697775.dir/build.make CMakeFiles/cmTryCompileExec563697775.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec563697775.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec563697775.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: 'getpass_r' undeclared (first use in this function)
+   return ((int*)(&getpass_r))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec563697775.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec563697775/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef getpass_r
+  return ((int*)(&getpass_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the strlcat exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3962709909/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3962709909.dir/build.make CMakeFiles/cmTryCompileExec3962709909.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3962709909.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec3962709909.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: 'strlcat' undeclared (first use in this function)
+   return ((int*)(&strlcat))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3962709909.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec3962709909/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcat
+  return ((int*)(&strlcat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the RAND_status exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec223649958/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec223649958.dir/build.make CMakeFiles/cmTryCompileExec223649958.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec223649958.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec223649958.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: 'RAND_status' undeclared (first use in this function)
+   return ((int*)(&RAND_status))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec223649958.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec223649958/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef RAND_status
+  return ((int*)(&RAND_status))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the RAND_screen exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2351193914/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2351193914.dir/build.make CMakeFiles/cmTryCompileExec2351193914.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2351193914.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec2351193914.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: 'RAND_screen' undeclared (first use in this function)
+   return ((int*)(&RAND_screen))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2351193914.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec2351193914/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef RAND_screen
+  return ((int*)(&RAND_screen))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the RAND_egd exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2489653416/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2489653416.dir/build.make CMakeFiles/cmTryCompileExec2489653416.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2489653416.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec2489653416.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: 'RAND_egd' undeclared (first use in this function)
+   return ((int*)(&RAND_egd))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2489653416.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec2489653416/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef RAND_egd
+  return ((int*)(&RAND_egd))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CRYPTO_cleanup_all_ex_data exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec159519799/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec159519799.dir/build.make CMakeFiles/cmTryCompileExec159519799.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec159519799.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec159519799.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: 'CRYPTO_cleanup_all_ex_data' undeclared (first use in this function)
+   return ((int*)(&CRYPTO_cleanup_all_ex_data))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec159519799.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec159519799/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CRYPTO_cleanup_all_ex_data
+  return ((int*)(&CRYPTO_cleanup_all_ex_data))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the _strtoi64 exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec904842888/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec904842888.dir/build.make CMakeFiles/cmTryCompileExec904842888.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec904842888.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec904842888.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: error: '_strtoi64' undeclared (first use in this function)
+   return ((int*)(&_strtoi64))[argc];
+                   ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:64:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec904842888.dir/CheckSymbolExists.c.o] Error 1
+make: *** [cmTryCompileExec904842888/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _strtoi64
+  return ((int*)(&_strtoi64))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the idn_free exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2616932001/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2616932001.dir/build.make CMakeFiles/cmTryCompileExec2616932001.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2616932001.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec2616932001.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec2616932001
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec2616932001.dir/link.txt --verbose=1
+/usr/bin/cc        CMakeFiles/cmTryCompileExec2616932001.dir/CheckSymbolExists.c.o  -o cmTryCompileExec2616932001 -rdynamic -lssl -lcrypto -lldap -llber 
+CMakeFiles/cmTryCompileExec2616932001.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0xa): undefined reference to `idn_free'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec2616932001] Error 1
+make: *** [cmTryCompileExec2616932001/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef idn_free
+  return ((int*)(&idn_free))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the idna_strerror exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec942307233/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec942307233.dir/build.make CMakeFiles/cmTryCompileExec942307233.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec942307233.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec942307233.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec942307233
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec942307233.dir/link.txt --verbose=1
+/usr/bin/cc        CMakeFiles/cmTryCompileExec942307233.dir/CheckSymbolExists.c.o  -o cmTryCompileExec942307233 -rdynamic -lssl -lcrypto -lldap -llber 
+CMakeFiles/cmTryCompileExec942307233.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0xa): undefined reference to `idna_strerror'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec942307233] Error 1
+make: *** [cmTryCompileExec942307233/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef idna_strerror
+  return ((int*)(&idna_strerror))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the tld_strerror exist failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec375963016/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec375963016.dir/build.make CMakeFiles/cmTryCompileExec375963016.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec375963016.dir/CheckSymbolExists.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1  -o CMakeFiles/cmTryCompileExec375963016.dir/CheckSymbolExists.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec375963016
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec375963016.dir/link.txt --verbose=1
+/usr/bin/cc        CMakeFiles/cmTryCompileExec375963016.dir/CheckSymbolExists.c.o  -o cmTryCompileExec375963016 -rdynamic -lssl -lcrypto -lldap -llber 
+CMakeFiles/cmTryCompileExec375963016.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0xa): undefined reference to `tld_strerror'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec375963016] Error 1
+make: *** [cmTryCompileExec375963016/fast] Error 2
+
+File /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <ldap.h>
+#include <lber.h>
+#include <stdio.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/param.h>
+#include <sys/poll.h>
+#include <sys/resource.h>
+#include <sys/select.h>
+#include <sys/socket.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <sys/uio.h>
+#include <sys/un.h>
+#include <alloca.h>
+#include <arpa/inet.h>
+#include <arpa/tftp.h>
+#include <assert.h>
+#include <err.h>
+#include <errno.h>
+#include <fcntl.h>
+#include <idn-free.h>
+#include <ifaddrs.h>
+#include <libgen.h>
+#include <limits.h>
+#include <locale.h>
+#include <net/if.h>
+#include <netdb.h>
+#include <netinet/in.h>
+#include <netinet/tcp.h>
+#include <poll.h>
+#include <pwd.h>
+#include <setjmp.h>
+#include <sgtty.h>
+#include <signal.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <stropts.h>
+#include <termio.h>
+#include <termios.h>
+#include <time.h>
+#include <tld.h>
+#include <unistd.h>
+#include <utime.h>
+#include <stddef.h>
+#include <dlfcn.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netinet/if_ether.h>
+#include <stdint.h>
+#include <sys/utsname.h>
+#include <idna.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef tld_strerror
+  return ((int*)(&tld_strerror))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing Curl Test HAVE_IOCTLSOCKET failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1673644961/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1673644961.dir/build.make CMakeFiles/cmTryCompileExec1673644961.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1673644961.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_IOCTLSOCKET  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec1673644961.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:322:44: error: 'FIONBIO' undeclared (first use in this function)
+  unsigned long flags = ioctlsocket(socket, FIONBIO, &flags);
+                                            ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:322:44: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1673644961.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec1673644961/fast] Error 2
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3712428140/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3712428140.dir/build.make CMakeFiles/cmTryCompileExec3712428140.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3712428140.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec3712428140.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+Linking C executable cmTryCompileExec3712428140
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3712428140.dir/link.txt --verbose=1
+/usr/bin/cc    -DHAVE_IOCTLSOCKET_CAMEL  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H    CMakeFiles/cmTryCompileExec3712428140.dir/CurlTests.c.o  -o cmTryCompileExec3712428140 -rdynamic -lssl -lcrypto -lldap -llber 
+CMakeFiles/cmTryCompileExec3712428140.dir/CurlTests.c.o: In function `main':
+CurlTests.c:(.text+0x21): undefined reference to `IoctlSocket'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec3712428140] Error 1
+make: *** [cmTryCompileExec3712428140/fast] Error 2
+
+Performing Curl Test HAVE_IOCTLSOCKET_CAMEL_FIONBIO failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3306349699/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3306349699.dir/build.make CMakeFiles/cmTryCompileExec3306349699.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3306349699.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_IOCTLSOCKET_CAMEL_FIONBIO  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec3306349699.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:378:32: error: 'FIONBIO' undeclared (first use in this function)
+         if(0 != ioctlsocket(0, FIONBIO, &flags))
+                                ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:378:32: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3306349699.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec3306349699/fast] Error 2
+
+Performing Curl Test HAVE_IOCTLSOCKET_FIONBIO failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3216593331/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3216593331.dir/build.make CMakeFiles/cmTryCompileExec3216593331.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3216593331.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_IOCTLSOCKET_FIONBIO  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec3216593331.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:405:32: error: 'FIONBIO' undeclared (first use in this function)
+         if(0 != ioctlsocket(0, FIONBIO, &flags))
+                                ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:405:32: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3216593331.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec3216593331/fast] Error 2
+
+Performing Curl Test HAVE_SETSOCKOPT_SO_NONBLOCK failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec847712083/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec847712083.dir/build.make CMakeFiles/cmTryCompileExec847712083.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec847712083.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_SETSOCKOPT_SO_NONBLOCK  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec847712083.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:501:43: error: 'SO_NONBLOCK' undeclared (first use in this function)
+         if(0 != setsockopt(0, SOL_SOCKET, SO_NONBLOCK, 0, 0))
+                                           ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:501:43: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec847712083.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec847712083/fast] Error 2
+
+Performing Curl Test HAVE_O_NONBLOCK failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1787677774/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1787677774.dir/build.make CMakeFiles/cmTryCompileExec1787677774.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1787677774.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_O_NONBLOCK  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec1787677774.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+Linking C executable cmTryCompileExec1787677774
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1787677774.dir/link.txt --verbose=1
+/usr/bin/cc    -DHAVE_O_NONBLOCK  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H    CMakeFiles/cmTryCompileExec1787677774.dir/CurlTests.c.o  -o cmTryCompileExec1787677774 -rdynamic -lssl -lcrypto -lldap -llber 
+/usr/lib/gcc/i686-linux-gnu/4.8/../../../i386-linux-gnu/crt1.o: In function `_start':
+(.text+0x18): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1787677774] Error 1
+make: *** [cmTryCompileExec1787677774/fast] Error 2
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_5 failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3640565395/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3640565395.dir/build.make CMakeFiles/cmTryCompileExec3640565395.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3640565395.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_GETHOSTBYADDR_R_5  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec3640565395.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:106:23: error: storage size of 'hdata' isn't known
+   struct hostent_data hdata;
+                       ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:127:3: error: too few arguments to function 'gethostbyaddr_r'
+   rc = gethostbyaddr_r(address, length, type, &h, &hdata);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:172:12: note: declared here
+ extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+            ^
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3640565395.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec3640565395/fast] Error 2
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_7 failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1304671929/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1304671929.dir/build.make CMakeFiles/cmTryCompileExec1304671929.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1304671929.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_GETHOSTBYADDR_R_7  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec1304671929.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:130:3: warning: passing argument 7 of 'gethostbyaddr_r' from incompatible pointer type [enabled by default]
+   hp = gethostbyaddr_r(address, length, type, &h, buffer, 8192, &h_errnop);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:172:12: note: expected 'struct hostent ** __restrict__' but argument is of type 'int *'
+ extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+            ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:130:3: error: too few arguments to function 'gethostbyaddr_r'
+   hp = gethostbyaddr_r(address, length, type, &h, buffer, 8192, &h_errnop);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:172:12: note: declared here
+ extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+            ^
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1304671929.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec1304671929/fast] Error 2
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_5_REENTRANT failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2153501184/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2153501184.dir/build.make CMakeFiles/cmTryCompileExec2153501184.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2153501184.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_GETHOSTBYADDR_R_5_REENTRANT  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec2153501184.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:106:23: error: storage size of 'hdata' isn't known
+   struct hostent_data hdata;
+                       ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:127:3: error: too few arguments to function 'gethostbyaddr_r'
+   rc = gethostbyaddr_r(address, length, type, &h, &hdata);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:172:12: note: declared here
+ extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+            ^
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2153501184.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec2153501184/fast] Error 2
+
+Performing Curl Test HAVE_GETHOSTBYADDR_R_7_REENTRANT failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3337219823/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3337219823.dir/build.make CMakeFiles/cmTryCompileExec3337219823.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3337219823.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_GETHOSTBYADDR_R_7_REENTRANT  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec3337219823.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:130:3: warning: passing argument 7 of 'gethostbyaddr_r' from incompatible pointer type [enabled by default]
+   hp = gethostbyaddr_r(address, length, type, &h, buffer, 8192, &h_errnop);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:172:12: note: expected 'struct hostent ** __restrict__' but argument is of type 'int *'
+ extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+            ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:130:3: error: too few arguments to function 'gethostbyaddr_r'
+   hp = gethostbyaddr_r(address, length, type, &h, buffer, 8192, &h_errnop);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:172:12: note: declared here
+ extern int gethostbyaddr_r (const void *__restrict __addr, __socklen_t __len,
+            ^
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3337219823.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec3337219823/fast] Error 2
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3 failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3649449442/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3649449442.dir/build.make CMakeFiles/cmTryCompileExec3649449442.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3649449442.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_GETHOSTBYNAME_R_3  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec3649449442.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:106:23: error: storage size of 'hdata' isn't known
+   struct hostent_data hdata;
+                       ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:139:3: error: too few arguments to function 'gethostbyname_r'
+   rc = gethostbyname_r(address, &h, &hdata);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:179:12: note: declared here
+ extern int gethostbyname_r (const char *__restrict __name,
+            ^
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3649449442.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec3649449442/fast] Error 2
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5 failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1802771676/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1802771676.dir/build.make CMakeFiles/cmTryCompileExec1802771676.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1802771676.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_GETHOSTBYNAME_R_5  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec1802771676.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:142:3: warning: passing argument 5 of 'gethostbyname_r' from incompatible pointer type [enabled by default]
+   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:179:12: note: expected 'struct hostent ** __restrict__' but argument is of type 'int *'
+ extern int gethostbyname_r (const char *__restrict __name,
+            ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:142:3: error: too few arguments to function 'gethostbyname_r'
+   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:179:12: note: declared here
+ extern int gethostbyname_r (const char *__restrict __name,
+            ^
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1802771676.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec1802771676/fast] Error 2
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_3_REENTRANT failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3935784165/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3935784165.dir/build.make CMakeFiles/cmTryCompileExec3935784165.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3935784165.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_GETHOSTBYNAME_R_3_REENTRANT  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec3935784165.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:106:23: error: storage size of 'hdata' isn't known
+   struct hostent_data hdata;
+                       ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:139:3: error: too few arguments to function 'gethostbyname_r'
+   rc = gethostbyname_r(address, &h, &hdata);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:179:12: note: declared here
+ extern int gethostbyname_r (const char *__restrict __name,
+            ^
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3935784165.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec3935784165/fast] Error 2
+
+Performing Curl Test HAVE_GETHOSTBYNAME_R_5_REENTRANT failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1082717868/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1082717868.dir/build.make CMakeFiles/cmTryCompileExec1082717868.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1082717868.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_GETHOSTBYNAME_R_5_REENTRANT  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec1082717868.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:142:3: warning: passing argument 5 of 'gethostbyname_r' from incompatible pointer type [enabled by default]
+   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:179:12: note: expected 'struct hostent ** __restrict__' but argument is of type 'int *'
+ extern int gethostbyname_r (const char *__restrict __name,
+            ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:142:3: error: too few arguments to function 'gethostbyname_r'
+   rc = gethostbyname_r(address, &h, buffer, 8192, &h_errnop);
+   ^
+In file included from /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:93:0:
+/usr/include/netdb.h:179:12: note: declared here
+ extern int gethostbyname_r (const char *__restrict __name,
+            ^
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1082717868.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec1082717868/fast] Error 2
+
+Performing Curl Test HAVE_INET_NTOA_R_DECL failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec4221504432/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4221504432.dir/build.make CMakeFiles/cmTryCompileExec4221504432.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4221504432.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_INET_NTOA_R_DECL  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec4221504432.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:242:21: error: 'inet_ntoa_r' undeclared (first use in this function)
+   func = (func_type)inet_ntoa_r;
+                     ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:242:21: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec4221504432.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec4221504432/fast] Error 2
+
+Performing Curl Test HAVE_INET_NTOA_R_DECL_REENTRANT failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec2152468997/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2152468997.dir/build.make CMakeFiles/cmTryCompileExec2152468997.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2152468997.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_INET_NTOA_R_DECL_REENTRANT  -DHAVE_LDAP_H -DHAVE_LBER_H -DHAVE_STDIO_H -DHAVE_INTTYPES_H -DHAVE_SYS_IOCTL_H -DHAVE_SYS_PARAM_H -DHAVE_SYS_POLL_H -DHAVE_SYS_RESOURCE_H -DHAVE_SYS_SELECT_H -DHAVE_SYS_SOCKET_H -DHAVE_SYS_STAT_H -DHAVE_SYS_TIME_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_UIO_H -DHAVE_SYS_UN_H -DHAVE_ALLOCA_H -DHAVE_ARPA_INET_H -DHAVE_ARPA_TFTP_H -DHAVE_ASSERT_H -DHAVE_ERR_H -DHAVE_ERRNO_H -DHAVE_FCNTL_H -DHAVE_IDN_FREE_H -DHAVE_IFADDRS_H -DHAVE_LIBGEN_H -DHAVE_LIMITS_H -DHAVE_LOCALE_H -DHAVE_NET_IF_H -DHAVE_NETDB_H -DHAVE_NETINET_IN_H -DHAVE_NETINET_TCP_H -DHAVE_POLL_H -DHAVE_PWD_H -DHAVE_SETJMP_H -DHAVE_SGTTY_H -DHAVE_SIGNAL_H -DHAVE_STDBOOL_H -DHAVE_STDINT_H -DHAVE_STDIO_H -DHAVE_STDLIB_H -DHAVE_STRING_H -DHAVE_STRINGS_H -DHAVE_STROPTS_H -DHAVE_TERMIO_H -DHAVE_TERMIOS_H -DHAVE_TIME_H -DHAVE_TLD_H -DHAVE_UNISTD_H -DHAVE_UTIME_H -DHAVE_STDDEF_H -DHAVE_DLFCN_H -DHAVE_MALLOC_H -DHAVE_MEMORY_H -DHAVE_NETINET_IF_ETHER_H -DHAVE_STDINT_H -DHAVE_SYS_UTSNAME_H -DHAVE_IDNA_H   -o CMakeFiles/cmTryCompileExec2152468997.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:257:22: error: 'inet_ntoa_r' undeclared (first use in this function)
+   func = (func_type)&inet_ntoa_r;
+                      ^
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:257:22: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2152468997.dir/CurlTests.c.o] Error 1
+make: *** [cmTryCompileExec2152468997/fast] Error 2
+
+Performing Curl Test HAVE_GLIBC_STRERROR_R failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1766359031/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1766359031.dir/build.make CMakeFiles/cmTryCompileExec1766359031.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1766359031.dir/CurlTests.c.o
+/usr/bin/cc   -DHAVE_GLIBC_STRERROR_R   -o CMakeFiles/cmTryCompileExec1766359031.dir/CurlTests.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c: In function 'main':
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMake/CurlTests.c:514:5: warning: initialization makes pointer from integer without a cast [enabled by default]
+     strerror_r(EACCES, buffer, sizeof(buffer));
+     ^
+Linking C executable cmTryCompileExec1766359031
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1766359031.dir/link.txt --verbose=1
+/usr/bin/cc    -DHAVE_GLIBC_STRERROR_R    CMakeFiles/cmTryCompileExec1766359031.dir/CurlTests.c.o  -o cmTryCompileExec1766359031 -rdynamic -lssl -lcrypto -lldap -llber 
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+There was a problem running this test
+
+
+Determining size of curl_off_t failed with the following output:
+Change Dir: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec3910759046/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3910759046.dir/build.make CMakeFiles/cmTryCompileExec3910759046.dir/build
+make[1]: Entering directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3910759046.dir/SIZEOF_CURL_OFF_T.c.o
+/usr/bin/cc  -DLDAP_DEPRECATED=1 -D_FILE_OFFSET_BITS=64   -o CMakeFiles/cmTryCompileExec3910759046.dir/SIZEOF_CURL_OFF_T.c.o   -c /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CheckTypeSize/SIZEOF_CURL_OFF_T.c
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CheckTypeSize/SIZEOF_CURL_OFF_T.c:4:76: fatal error: /home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/curl/curl.h: No such file or directory
+ #include "/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/curl/curl.h"
+                                                                            ^
+compilation terminated.
+make[1]: Leaving directory `/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3910759046.dir/SIZEOF_CURL_OFF_T.c.o] Error 1
+make: *** [cmTryCompileExec3910759046/fast] Error 2
+
+/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/CMakeFiles/CheckTypeSize/SIZEOF_CURL_OFF_T.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+#include "/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/curl/curl.h"
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#endif
+
+#define SIZE (sizeof(curl_off_t))
+char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+

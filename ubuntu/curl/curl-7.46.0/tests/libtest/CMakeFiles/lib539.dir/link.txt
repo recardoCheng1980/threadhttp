@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/lib539.dir/lib539.c.o CMakeFiles/lib539.dir/first.c.o  -o lib539 -rdynamic ../../lib/libcurl.so -lidn -llber -lldap -ldl -lssl -lcrypto -lz -Wl,-rpath,/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/lib 

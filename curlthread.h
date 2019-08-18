@@ -1,8 +1,8 @@
 #ifndef _curlthread_h
 #define _curlthread_h
 
-#include <curl/curl.h>
 #include <pthread.h>
+#include "curl/curl.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -21,9 +21,10 @@ typedef struct curlString {
 } curlString;
 
 
+int cli_conn(threadData* pData);
 void init_string(curlString *s);
-size_t callbackFunc(void *ptr, size_t size, size_t nmemb, curlString *s);
-void* curl_entry(void* param);
+size_t writefunc(void *ptr, size_t size, size_t nmemb, curlString *s);
+void curl_entry(void* param);
 
 #ifdef __cplusplus
 }

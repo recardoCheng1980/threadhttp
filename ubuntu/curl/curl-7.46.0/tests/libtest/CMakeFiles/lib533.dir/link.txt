@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/lib533.dir/lib533.c.o CMakeFiles/lib533.dir/first.c.o CMakeFiles/lib533.dir/testutil.c.o CMakeFiles/lib533.dir/__/__/lib/warnless.c.o  -o lib533 -rdynamic ../../lib/libcurl.so -lidn -llber -lldap -ldl -lssl -lcrypto -lz -Wl,-rpath,/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/lib 

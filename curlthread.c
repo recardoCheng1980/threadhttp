@@ -59,13 +59,13 @@ size_t writefunc(void *ptr, size_t size, size_t nmemb, curlString *s)
   memcpy(s->ptr+s->len, ptr, size*nmemb);
   s->ptr[new_len] = '\0';
   s->len = new_len;
-  printf ("%s", s->ptr);
-  printf ("==============\n") ;
+  //printf ("%s", s->ptr);
+  //printf ("==============\n") ;
 
   return size*nmemb;
 }
 
-void* curl_entry(void* param)
+void curl_entry(void* param)
 {
   CURL *curl;
   CURLcode res;
@@ -73,17 +73,15 @@ void* curl_entry(void* param)
   
   memcpy(&pData, param, sizeof(threadData));
 
-
-  printf("curlthread start\n");
-  //curl_global_init(CURL_GLOBAL_DEFAULT);
-
+  //printf("thread begin: %ld, %ld\n", (long)getpid(), (long)getppid());
   curl = curl_easy_init();
   if(curl) {
     curlString s;
     init_string(&s);
 
 #if 1
-    curl_easy_setopt(curl, CURLOPT_URL, "http://35.229.214.234:8080/");
+    //curl_easy_setopt(curl, CURLOPT_URL, "http://35.229.214.234:8080/");
+    curl_easy_setopt(curl, CURLOPT_URL, "http://example.com");
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &s);
     curl_easy_setopt(curl, CURLOPT_TIMEOUT, 1L);
@@ -112,11 +110,7 @@ void* curl_entry(void* param)
 
     /* always cleanup */
     curl_easy_cleanup(curl);
-    printf("curlthread end\n");
   }   
-
-  //curl_global_cleanup();
-
   cli_conn(&pData); 
-  //printf("after thread, mac:%s, fd:%d, client_id:%d\n", pData->mac, pData->fd, pData->client_id);
+  //printf("thread end: %ld, %ld\n", (long)getpid(), (long)getppid());
 }

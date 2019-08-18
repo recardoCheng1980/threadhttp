@@ -12,7 +12,11 @@
 #include <ctype.h>
 #include <time.h>
 #include <signal.h> 
+#include <stdarg.h>
+#include <errno.h>
+#include <assert.h>
 
+#include "threadpool.h"
 #include "http_parser.h"
 #include "uthash.h"
 #include "curlthread.h"
@@ -26,32 +30,37 @@
 #define MAX_DEBUG_LINE 128
 
 #define UH_LIMIT_HEADERS  128
-
 #define UH_HTTP_MSG_GET   0
 #define UH_HTTP_MSG_HEAD  1
 #define UH_HTTP_MSG_POST  2
+
 #define SOCK_PATH "/tmp/uds"
 
+#define THREAD 4
+#define QUEUE 512
+
 #define foreach_header(i, h) for( i = 0; (i + 1) < (sizeof(h) / sizeof(h[0])) && h[i]; i += 2 )
-
-
 
 static unsigned int client_counter=1;
 unsigned int client_id[FD_SETSIZE]={0};
 int socket_type[FD_SETSIZE]={0};
-pthread_t threadId[FD_SETSIZE]={0};
+//pthread_t threadId[FD_SETSIZE]={0};
 threadData tData[FD_SETSIZE]={0};
-int sendStatus[FD_SETSIZE]={0};
-static int writeCount=0;
-static int udsCount=0;
+static int max_fd=0;
 
 
-typedef struct _client_struct {
+typedef struct client_struct {
   char ip[MAXIP]; //key
   char mac[MAXMAC];
   time_t ts;
   UT_hash_handle hh;         /* makes this structure hashable */
 } client_struct;
+
+typedef struct mac_struct {
+  char mac[MAXMAC];
+  time_t ts;
+  UT_hash_handle hh;         /* makes this structure hashable */
+} mac_struct;
 
 typedef struct _http_request {
   int method;
@@ -60,12 +69,6 @@ typedef struct _http_request {
   char *url;
   char *headers[UH_LIMIT_HEADERS];
 } http_request;
-
-typedef struct _resp_buf {
-  int fd; //key
-  char redirResp[MAXMSG];
-  char muteResp[MAXMSG];
-} resp_buf;
 
 client_struct* client_list=NULL;
 static http_request sHttpReq;
@@ -78,28 +81,74 @@ char *server_url=NULL;
 char *address=NULL;
 FILE *fp=NULL;
 uint32_t SESSION_TRACKER=0;
+mac_struct* mac_auth_cache=NULL;
 
-void log_print(char* logline)
-{
-  //if(SESSION_TRACKER==0) {
-  //  if (fp) {
-  //    fclose(fp);
-  //    fp=NULL;
-  //  }
-  //  system("mv /tmp/uhttpd.log /tmp/uhttpd.log.bak 2>/dev/null");
-  //  fp=fopen ("/tmp/uhttpd.log","w+");
-  //}
+#define log_printf file_printf
 
-  //if (fp==NULL)
-  //  return;
+void file_printf(const char *fmt, ...) {
+    va_list args;
 
-  //fprintf(fp ,"%s\n", logline);
-  //fflush(fp);
-  //SESSION_TRACKER++;
+    if(SESSION_TRACKER==0) {
+      if (fp) {
+        fclose(fp);
+        fp=NULL;
+      }
+      system("mv /tmp/uhttpd.log /tmp/uhttpd.log.bak 2>/dev/null");
+      fp=fopen ("/tmp/uhttpd.log","w+");
+    }
 
-  //if (SESSION_TRACKER > 30000) {
-  //  SESSION_TRACKER=0;
-  //}
+    va_start(args, fmt);
+    vfprintf(fp, fmt, args);
+    va_end(args);
+
+    SESSION_TRACKER++;
+
+    if (SESSION_TRACKER > 50000) {
+      SESSION_TRACKER=0;
+    }
+}
+
+int is_mac_hit(char *cache_mac) {
+    mac_struct *s=NULL;
+
+    HASH_FIND_STR( mac_auth_cache, cache_mac, s );  /* s: output pointer */
+    if (s==NULL) {
+      return 0;
+    }
+    else {
+        time_t now=time(NULL);
+        if ((now - s->ts) > 60) {
+          return 0;
+        }
+    }
+    return 1;
+}
+
+void add_mac_cache(char *cache_mac, time_t ts) {
+    mac_struct *s=NULL;
+
+    HASH_FIND_STR( mac_auth_cache, cache_mac, s );  /* s: output pointer */
+    if (s==NULL) {
+      s=malloc(sizeof(struct mac_struct));
+      snprintf(s->mac, sizeof(s->mac), "%s", cache_mac);
+      s->ts=ts;
+      HASH_ADD_STR(mac_auth_cache, mac, s);  /* id: name of key field */
+    }   
+    else {
+      s->ts=ts;
+    }
+}
+
+void flush_mac_cache(int *cache_mac) {
+}
+
+void print_mac_cache() {
+  struct mac_struct *entry, *tmp;
+
+  //log_printf("mac cache list, ts:%llu\n", (long long) time(NULL));
+  HASH_ITER(hh, mac_auth_cache, entry, tmp) {
+    log_printf("mac:%s, ts:%llu\n", entry->mac, (long long) entry->ts);
+  }
 }
 
 char *strfind(char *haystack, int hslen, const char *needle, int ndlen)
@@ -212,7 +261,7 @@ void http_redir_response(int filedes)
       snprintf(redirect_url, sizeof(redirect_url)-1,
                "%s?node_id=%s&gateway_id=%s&node_mac=%s&client_mac=%s&client_ip=%s&ssid=%s&cont_url=http://%s%s",
                server_url, node_id, "test", node_mac, mac, client_ip, "1", sHttpReq.headers[i+1], sHttpReq.url);
-      log_print(redirect_url);
+      //log_printf("%s\n", redirect_url);
 
       len = snprintf(buffer, sizeof(buffer),
                      "HTTP/1.1 200 OK\r\n"
@@ -226,11 +275,11 @@ void http_redir_response(int filedes)
 
       if (!strcasecmp(sHttpReq.headers[i+1], local_req) && !strcasecmp(sHttpReq.url, "/dumpinfo")) {
         //dump
-        log_print("===========================================================");
+        log_printf("===========================================================");
         char debug_line[MAX_DEBUG_LINE];
         HASH_ITER(hh, client_list, s, tmp) {
           snprintf(debug_line, sizeof(debug_line), "ip:%s, mac:%s, ts:%d", s->ip, s->mac, (uint32_t)s->ts);
-          log_print(debug_line);
+          log_printf("%s\n", debug_line);
         }
       }
     }
@@ -384,7 +433,7 @@ int createDomainSocket() {
       perror("bind failed");
       exit(EXIT_FAILURE);
   }
-  //printf("Listener on port %s \n", SOCK_PATH);
+  log_printf("Listener on port %s \n", SOCK_PATH);
 
   if (listen(domainSocket, 32) < 0)
   {
@@ -491,7 +540,7 @@ void sigintHandler(int sig_num)
     /* Reset handler to catch SIGINT next time. 
        Refer http://en.cppreference.com/w/c/program/signal */
     signal(SIGINT, sigintHandler); 
-    printf("\n Cannot be terminated using Ctrl+C \n"); 
+    log_printf("Cannot be terminated using Ctrl+C \n"); 
     fflush(stdout); 
 } 
 
@@ -503,6 +552,9 @@ int main (int argc, char **argv)
   int i;
   size_t size;
   int opt;
+
+  threadpool_t *pool=NULL;
+  assert((pool = threadpool_create(THREAD, QUEUE, 0)) != NULL);
 
   //signal(SIGINT, sigintHandler); 
 
@@ -525,19 +577,26 @@ int main (int argc, char **argv)
       node_id=optarg;
       break;
     default:
-      printf("Invalid option\n\r");
+      log_printf("Invalid option\n\r");
       exit(1);
       break;
     }
   }
 
-  int domainSocket=createDomainSocket();
 
   /* Create the socket and set it up to accept connections. */
   sock = make_socket (port, address);
   if (listen (sock, 64) < 0) {
     perror ("listen");
     exit (EXIT_FAILURE);
+  }
+  if (sock > max_fd) {
+    max_fd=sock;
+  }
+
+  int domainSocket=createDomainSocket();
+  if (sock > max_fd) {
+    max_fd=sock;
   }
 
 
@@ -552,6 +611,10 @@ int main (int argc, char **argv)
 
   curl_global_init(CURL_GLOBAL_DEFAULT);
 
+  //init thread pool
+  assert((pool = threadpool_create(THREAD, QUEUE, 0)) != NULL);
+
+
   while (1) {
     struct timeval tv;
     fd_set readfd_set;
@@ -565,22 +628,19 @@ int main (int argc, char **argv)
     FD_ZERO (&writefd_set);
     readfd_set = active_readfd_set;
     writefd_set = active_writefd_set;
-    /* Block until input arrives on one or more active sockets. */
-    ret=select (FD_SETSIZE, &readfd_set, &writefd_set, NULL, &tv);
 
+    ret=select (max_fd+1, &readfd_set, &writefd_set, NULL, &tv);
     if (ret==-1) {
-      printf("select error, exit\n");
-      sleep(1);
+      log_printf("select error, exit\n");
       exit (EXIT_FAILURE);
     }
     else if (ret==0) {
-      printf("select continue\n");
+      log_printf("select continue\n");
       continue;
     }
     else {
-      printf("select fd\n");
       /* Service all the sockets with input pending. */
-      for (i = 0; i < FD_SETSIZE; ++i) {
+      for (i = 0; i < (max_fd+1); ++i) {
         if (FD_ISSET (i, &readfd_set)) {
           if (i == sock) {
             /* Connection request on original socket. */
@@ -590,25 +650,28 @@ int main (int argc, char **argv)
             size = sizeof (clientname);
             new = accept (sock, (struct sockaddr *) &clientname, &size);
             if (new < 0) {
-              printf("accept error\n");
+              log_printf("accept error\n");
               //exit (EXIT_FAILURE);
             }
             client_id[new]=client_counter++;
-            printf("http connection, fd:%d, client_id:%d\n", new, client_id[new]);
             FD_SET (new, &active_readfd_set);
 
+            if (new > max_fd) {
+              max_fd=new;
+            }
           } else if (i == domainSocket){
-            //printf("domain socket listen\n");
+            //log_printf("domain socket listen\n");
             struct sockaddr_in udsaddress;
             size_t addrlen = sizeof(udsaddress);
             int domainSocketNew = accept (domainSocket, (struct sockaddr *) &udsaddress, &addrlen);
-            //printf("new uds socket accpeted\n");
             socket_type[domainSocketNew]=1;
             client_id[domainSocketNew]=client_counter++;
-            printf("uds connection, fd:%d, client_id:%d\n", domainSocketNew, client_id[domainSocketNew]);
             FD_SET (domainSocketNew, &active_readfd_set);
+            if (domainSocketNew > max_fd) {
+              max_fd=domainSocketNew;
+            }
           } else if (socket_type[i] == 1){
-            //printf("domain socket connection socket:%d\n", i);
+            //log_printf("domain socket connection socket\n");
             char msg[1024]={0};
             int read_size=0;
             threadData resp;
@@ -619,21 +682,21 @@ int main (int argc, char **argv)
             //TODO: while?
             if ((read_size=recv(i, msg, sizeof(msg), 0))>0 ) {
               resp=*((threadData*)((msg+sizeof(int))));
-              printf("current fd:%d\n", i);
-              printf("uds fd:%d\n", resp.fd);
-              printf("uds mac:%s\n", resp.mac);
-              printf("uds client id:%u\n", resp.client_id);
+
+              log_printf("uds mac:%s\n", resp.mac);
+              log_printf("uds fd:%d\n", resp.fd);
+              log_printf("uds authStatus:%d\n", resp.authStatus);
+              
+              add_mac_cache(mac, time(NULL));
+              //print_mac_cache();
             }
 
             else {
-              printf("unable to recv data from uds\n");
+              log_printf("unable to recv data from uds\n");
               exit(1);
             }
             if (resp.client_id==client_id[resp.fd]) {
               FD_SET(resp.fd, &active_writefd_set);
-            }
-            else { //original connection is closed
-              printf("client id is different, fd:%d, resp.fd:%d, client_id[resp.fd]:%d, resp.client_id:%d\n", i, resp.fd, client_id[resp.fd], resp.client_id );
             }
             close(i);
             FD_CLR (i, &active_readfd_set);
@@ -641,11 +704,29 @@ int main (int argc, char **argv)
             client_id[i]=0;
 
           } else {
+            //log_printf("http read data\n");
             char buffer[MAXMSG]= {0};
-            int read_size=read_from_client(i, buffer, MAXMSG);
+            int read_size=read(i, buffer, MAXMSG);
+
 
             /* Data arriving on an already-connected socket. */
-            if (read_size <= 0) {
+            if (read_size < 0) { //test case hit
+              //log_printf("read size < 0:%d\n", read_size);
+              log_printf("close error with msg is: %s\n",strerror(errno));
+     
+              if (EAGAIN==errno || EWOULDBLOCK==errno || EINTR==errno || ECONNRESET==errno  || ETIMEDOUT==errno ) {
+                FD_CLR (i, &active_readfd_set);
+                FD_CLR (i, &active_writefd_set);
+                close (i);
+                socket_type[i]=0;
+                client_id[i]=0;
+              }
+              else {
+                exit(1);
+              }
+             }
+            else if (read_size==0) {
+              //log_printf("read size == 0\n");
               FD_CLR (i, &active_readfd_set);
               FD_CLR (i, &active_writefd_set);
               close (i);
@@ -653,45 +734,58 @@ int main (int argc, char **argv)
               client_id[i]=0;
             }
             else {
-              printf("http header parse start\n");
               int httpRet=http_header_parse(i, buffer, read_size);
+              int ret=0;
 
               if (httpRet<0) {
-                printf("http header parse failure over\n");
                 FD_CLR (i, &active_readfd_set);
                 FD_CLR (i, &active_writefd_set);
                 close(i);
                 socket_type[i]=0;
                 client_id[i]=0;
               } else {
-                printf("http header parse success over\n");
-
                 updateMac(i);
+#if 0
+                http_redir_response(i);
+                FD_CLR (i, &active_readfd_set);
+                FD_CLR (i, &active_writefd_set);
+                close(i);
+                socket_type[i]=0;
+                client_id[i]=0;
+#else
                 snprintf(tData[i].mac, sizeof(tData[i].mac), "%s", mac);
                 tData[i].client_id=client_id[i];
                 tData[i].fd=i;
-                if (pthread_create(&threadId[i], NULL, curl_entry, &tData[i])) {
-                   printf("Error creating curl thread\n");
-                   exit(1);
-                 }
-                 int ret = pthread_detach(threadId[i]);
-                 if (ret!=0) {
-                   printf("pthread_detacehd error\n");
-                   exit(1);
-                 }
-
-
-                //http_redir_response(i);
-                //FD_CLR (i, &active_readfd_set);
-                //FD_CLR (i, &active_writefd_set);
-                //close(i);
-                //socket_type[i]=0;
-                //client_id[i]=0;
+//                if (is_mac_hit(mac)) {
+                if (1) {
+                  log_printf("hit mac cache, response directly\n");
+                  http_redir_response(i);
+                  FD_CLR (i, &active_readfd_set);
+                  FD_CLR (i, &active_writefd_set);
+                  close(i);
+                  socket_type[i]=0;
+                  client_id[i]=0;
+                }
+                else {
+                  ret=threadpool_add(pool, &curl_entry, (void*)&tData[i], 0);
+                  if (ret!=0) {
+                    if (ret==threadpool_queue_full) {
+                      log_printf("thread pool queue is full\n");
+                    }
+                    FD_CLR (i, &active_readfd_set);
+                    FD_CLR (i, &active_writefd_set);
+                    close(i);
+                    socket_type[i]=0;
+                    client_id[i]=0;
+                  }
+                }
+#endif
               }
             }
           }
         }//read fd set
 
+        //log_printf("before check write select");
         if (FD_ISSET (i, &writefd_set)) {
           char buffer[1024]={0};
           int len = snprintf(buffer, sizeof(buffer),
@@ -701,20 +795,23 @@ int main (int argc, char **argv)
                      "Pragma: no-cache\r\n"
                      "Expires: -1\r\n\r\n"
                      "<script>window.location.href='123'</script>");
-          send(i, buffer, len, 0);
-          sendStatus[i]=1;
+          send(i, buffer, len, MSG_NOSIGNAL); //disable sigpipe signal when remote socket is closed
 
           FD_CLR (i, &active_readfd_set);
           FD_CLR (i, &active_writefd_set);
           close(i);
           socket_type[i]=0;
           client_id[i]=0;
-          printf("clear client id in write:%d\n", i);
         }//write fd set
 
       }//for loop
     }//select 
+
+  //log_printf("select end\n");
+
   }//while
 
+  assert(threadpool_destroy(pool, 0) == 0);
   curl_global_cleanup();
+
 }

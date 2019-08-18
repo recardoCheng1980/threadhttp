@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/lib1505.dir/lib1502.c.o CMakeFiles/lib1505.dir/first.c.o CMakeFiles/lib1505.dir/testutil.c.o CMakeFiles/lib1505.dir/__/__/lib/warnless.c.o  -o lib1505 -rdynamic ../../lib/libcurl.so -lidn -llber -lldap -ldl -lssl -lcrypto -lz -Wl,-rpath,/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/lib 

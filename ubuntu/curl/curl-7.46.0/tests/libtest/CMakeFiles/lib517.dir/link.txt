@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/lib517.dir/lib517.c.o CMakeFiles/lib517.dir/first.c.o  -o lib517 -rdynamic ../../lib/libcurl.so -lidn -llber -lldap -ldl -lssl -lcrypto -lz -Wl,-rpath,/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/lib 
