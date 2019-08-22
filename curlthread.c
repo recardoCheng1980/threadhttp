@@ -5,8 +5,8 @@
 
 int execmd(char* result, int len) {
   FILE *fp=NULL;
-  char* cmd[64]={0};
-  char* fileName[32]={0};
+  char cmd[64]={0};
+  char fileName[32]={0};
 
   snprintf(fileName, sizeof(fileName), "/tmp/uhttpd_log/thread.%d", getpid());
   snprintf(cmd, sizeof(cmd), "curl -s -o %s http://macauth.chengshihayng.com/macauth", fileName );

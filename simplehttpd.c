@@ -737,7 +737,7 @@ int main (int argc, char **argv)
               log_printf("uds fd:%d\n", resp.fd);
               log_printf("uds authStatus:%d\n", resp.authStatus);
               log_printf("uds redir:%s\n", resp.redirect_url);
-              log_printf("uds expire time:%d\n", resp.expire);
+              log_printf("uds expire time:%llu\n", (long long)resp.expire);
               
               add_mac_cache(mac, resp.expire);
               //print_mac_cache();
