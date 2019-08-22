@@ -489,7 +489,7 @@ int createDomainSocket() {
       perror("bind failed");
       exit(EXIT_FAILURE);
   }
-  printf("Listener on port %s \n", SOCK_PATH);
+  log_printf("Listener on port %s \n", SOCK_PATH);
 
   if (listen(domainSocket, 32) < 0)
   {
@@ -596,7 +596,7 @@ void sigintHandler(int sig_num)
     /* Reset handler to catch SIGINT next time. 
        Refer http://en.cppreference.com/w/c/program/signal */
     signal(SIGINT, sigintHandler); 
-    printf("Cannot be terminated using Ctrl+C \n"); 
+    log_printf("Cannot be terminated using Ctrl+C \n"); 
     fflush(stdout); 
 } 
 
@@ -609,8 +609,6 @@ int main (int argc, char **argv)
   size_t size;
   int opt;
   threadpool_t *pool=NULL;
-
-
   assert((pool = threadpool_create(THREAD, QUEUE, 0)) != NULL);
 
   //signal(SIGINT, sigintHandler); 
@@ -634,7 +632,7 @@ int main (int argc, char **argv)
       node_id=optarg;
       break;
     default:
-      printf("Invalid option\n\r");
+      log_printf("Invalid option\n\r");
       exit(1);
       break;
     }
@@ -665,7 +663,6 @@ int main (int argc, char **argv)
   FD_ZERO (&active_writefd_set);
   //FD_SET (sock, &active_writefd_set);
 
-
   //curl_global_init(CURL_GLOBAL_DEFAULT);
 
   while (1) {
@@ -694,7 +691,6 @@ int main (int argc, char **argv)
     else {
       /* Service all the sockets with input pending. */
       for (i = 0; i < (max_fd+1); ++i) {
-
         if (FD_ISSET (i, &readfd_set)) {
           if (i == sock) {
             /* Connection request on original socket. */
@@ -741,9 +737,9 @@ int main (int argc, char **argv)
               log_printf("uds fd:%d\n", resp.fd);
               log_printf("uds authStatus:%d\n", resp.authStatus);
               log_printf("uds redir:%s\n", resp.redirect_url);
-              log_printf("uds expire time:%s\n", resp.redirect_url);
+              log_printf("uds expire time:%d\n", resp.expire);
               
-              add_mac_cache(mac, time(NULL));
+              add_mac_cache(mac, resp.expire);
               //print_mac_cache();
             }
 
@@ -804,7 +800,6 @@ int main (int argc, char **argv)
                 snprintf(tData[i].mac, sizeof(tData[i].mac), "%s", mac);
                 tData[i].client_id=client_id[i];
                 tData[i].fd=i;
-
                 //if (is_mac_hit(mac)) {
                 if (0) {
                   log_printf("hit mac cache, response directly\n");
@@ -818,7 +813,6 @@ int main (int argc, char **argv)
                 else {
                   make_redir_response(i);
                   //pthread_create(&threadId[i], NULL, curl_entry, &tData[i]);
-
                   ret=threadpool_add(pool, &curl_entry, (void*)&tData[i], 0);
                   if (ret!=0) {
                     if (ret==threadpool_queue_full) {
@@ -854,15 +848,10 @@ int main (int argc, char **argv)
           socket_type[i]=0;
           client_id[i]=0;
         }//write fd set
-
       }//for loop
     }//select 
-
-  log_printf("select end\n");
-
   }//while
 
   assert(threadpool_destroy(pool, 0) == 0);
   //curl_global_cleanup();
-
 }

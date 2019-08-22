@@ -31,7 +31,7 @@ typedef struct curlString {
 int cli_conn(threadData* pData);
 void init_string(curlString *s);
 size_t writefunc(void *ptr, size_t size, size_t nmemb, curlString *s);
-void* curl_entry(void* param);
+void curl_entry(void* param);
 
 #ifdef __cplusplus
 }

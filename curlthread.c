@@ -51,7 +51,6 @@ int cli_conn(threadData* pData)
     int bufferSize=sizeof(threadData)+sizeof(int);
     char *buffer=malloc(bufferSize);
     
-    pData->authStatus=pData->client_id;
     memset(buffer, 0x0, bufferSize);
     int length=sizeof(threadData);
     *((int*)buffer)=length;
@@ -87,21 +86,21 @@ size_t writefunc(void *ptr, size_t size, size_t nmemb, curlString *s)
   memcpy(s->ptr+s->len, ptr, size*nmemb);
   s->ptr[new_len] = '\0';
   s->len = new_len;
-  printf ("%s", s->ptr);
-  printf ("==============\n") ;
+  //printf ("%s", s->ptr);
+  //printf ("==============\n") ;
 
   return size*nmemb;
 }
 
-void* curl_entry(void* param)
+void curl_entry(void* param)
 {
   CURL *curl;
   CURLcode res;
   threadData pData={0};
   char result[64]={0};
   
-  memcpy(&pData, param, sizeof(threadData));
   printf("beg thread: %ld, %ld\n", (long)getpid(), (long)getppid());
+  memcpy(&pData, param, sizeof(threadData));
 
   int ret=execmd(result, sizeof(result));
 
@@ -121,41 +120,8 @@ void* curl_entry(void* param)
       pData.authStatus=0;
       pData.expire=0;
   }
- 
-#if 0
-  curl = curl_easy_init();
-  if(curl) {
-    curlString s;
-    init_string(&s);
-
-    curl_easy_setopt(curl, CURLOPT_URL, "http://macauth.chengshihayng.com/macauth");
-    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
-    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &s);
-    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 1L);
-    curl_easy_setopt(curl, CURLOPT_NOSIGNAL, (long)1);
-    res = curl_easy_perform(curl);
-
-    printf("res:%d, CURLE_OK:%d\n", res, CURLE_OK);
-    if (res == CURLE_OK) {
-      //char *substr=NULL;
-      //char delim=',';
-      //printf("==============\n");
-      //printf("%s\n", s.ptr);
-      //substr = strtok(s.ptr, delim);
-      //do {
-      //    printf("substr:%d\n", atoi(substr) );
-      //    substr = strtok(NULL, delim);
-      //} while (substr);
-      
-      free(s.ptr);
-      s.ptr=NULL;
-    }   
-    /* always cleanup */
-    curl_easy_cleanup(curl);
-  }   
-#endif
+  cli_conn(&pData); 
 
   printf("end thread: %ld, %ld\n", (long)getpid(), (long)getppid());
 
-  cli_conn(&pData); 
 }
