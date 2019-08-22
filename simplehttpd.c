@@ -663,7 +663,7 @@ int main (int argc, char **argv)
   FD_ZERO (&active_writefd_set);
   //FD_SET (sock, &active_writefd_set);
 
-  //curl_global_init(CURL_GLOBAL_DEFAULT);
+  curl_global_init(CURL_GLOBAL_DEFAULT);
 
   while (1) {
     struct timeval tv;
@@ -853,5 +853,5 @@ int main (int argc, char **argv)
   }//while
 
   assert(threadpool_destroy(pool, 0) == 0);
-  //curl_global_cleanup();
+  curl_global_cleanup();
 }
