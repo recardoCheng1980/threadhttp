@@ -1,8 +1,13 @@
 #ifndef _curlthread_h
 #define _curlthread_h
 
-#include <curl/curl.h>
 #include <pthread.h>
+#include "curl/curl.h"
+
+#define MAXMSG  1024
+#define MAXURLMSG 512
+#define MAXIP 20
+#define MAXMAC 20
 
 #ifdef __cplusplus
 extern "C" {
@@ -13,6 +18,8 @@ typedef struct threadData {
   int authStatus;
   unsigned int client_id;
   char mac[20];
+  char redirect_url[MAXURLMSG];
+  time_t expire;
 } threadData;
 
 typedef struct curlString {
@@ -21,8 +28,9 @@ typedef struct curlString {
 } curlString;
 
 
+int cli_conn(threadData* pData);
 void init_string(curlString *s);
-size_t callbackFunc(void *ptr, size_t size, size_t nmemb, curlString *s);
+size_t writefunc(void *ptr, size_t size, size_t nmemb, curlString *s);
 void* curl_entry(void* param);
 
 #ifdef __cplusplus

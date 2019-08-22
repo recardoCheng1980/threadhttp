@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/lib510.dir/lib510.c.o CMakeFiles/lib510.dir/first.c.o  -o lib510 -rdynamic ../../lib/libcurl.so -lidn -llber -lldap -ldl -lssl -lcrypto -lz -Wl,-rpath,/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/lib 

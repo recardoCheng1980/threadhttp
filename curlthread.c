@@ -3,6 +3,34 @@
 #include <sys/un.h>
 #include "curlthread.h"
 
+int execmd(char* result, int len) {
+  FILE *fp=NULL;
+  char* cmd[64]={0};
+  char* fileName[32]={0};
+
+  snprintf(fileName, sizeof(fileName), "/tmp/uhttpd_log/thread.%d", getpid());
+  snprintf(cmd, sizeof(cmd), "curl -s -o %s http://macauth.chengshihayng.com/macauth", fileName );
+  int ret=system(cmd);
+  if (ret!=0) {
+    printf("unable to exec curl, ret status:%d\n", ret);
+    return 1;
+  }
+
+  fp=fopen(fileName, "rb");
+  if (fp) {
+    while (!feof(fp)) {
+      int readSize=fread(result, 1, len, fp);
+      if (readSize<0) {
+        printf("unable to read file:%s\n", fileName);
+        fclose(fp);
+        return 1;
+      }
+    }
+    fclose(fp);
+  }
+  return 0;
+}
+
 int cli_conn(threadData* pData)
 {
     char path[] = "/tmp/uds";
@@ -70,53 +98,64 @@ void* curl_entry(void* param)
   CURL *curl;
   CURLcode res;
   threadData pData={0};
+  char result[64]={0};
   
   memcpy(&pData, param, sizeof(threadData));
+  printf("beg thread: %ld, %ld\n", (long)getpid(), (long)getppid());
 
+  int ret=execmd(result, sizeof(result));
 
-  printf("curlthread start\n");
-  //curl_global_init(CURL_GLOBAL_DEFAULT);
-
+  if (ret==0) {
+    char *pComma=strstr(result, ",");
+    if (pComma!=NULL) {
+      printf("%p, %p\n", result, pComma);
+      *pComma='\0';
+      int authStatus=atoi(result);
+      int ts=atoi(pComma+1);
+      printf("authStatus:%d, ts:%d\n", authStatus, ts);
+      pData.authStatus=authStatus;
+      pData.expire=ts;
+    }
+  }
+  else {
+      pData.authStatus=0;
+      pData.expire=0;
+  }
+ 
+#if 0
   curl = curl_easy_init();
   if(curl) {
     curlString s;
     init_string(&s);
 
-#if 1
-    curl_easy_setopt(curl, CURLOPT_URL, "http://35.229.214.234:8080/");
+    curl_easy_setopt(curl, CURLOPT_URL, "http://macauth.chengshihayng.com/macauth");
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &s);
     curl_easy_setopt(curl, CURLOPT_TIMEOUT, 1L);
     curl_easy_setopt(curl, CURLOPT_NOSIGNAL, (long)1);
     res = curl_easy_perform(curl);
-#else
 
-    curl_easy_setopt(curl, CURLOPT_URL, "https://35.229.214.234:1568/");
-//    curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, writefunc);
-//    curl_easy_setopt(curl, CURLOPT_WRITEDATA, &s);
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0L);
-    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYHOST, 0L);
-//    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 1L);
-//    curl_easy_setopt(curl, CURLOPT_NOSIGNAL, (long)1);
-    res = curl_easy_perform(curl);
-#endif
-
-
-
+    printf("res:%d, CURLE_OK:%d\n", res, CURLE_OK);
     if (res == CURLE_OK) {
+      //char *substr=NULL;
+      //char delim=',';
       //printf("==============\n");
       //printf("%s\n", s.ptr);
+      //substr = strtok(s.ptr, delim);
+      //do {
+      //    printf("substr:%d\n", atoi(substr) );
+      //    substr = strtok(NULL, delim);
+      //} while (substr);
+      
       free(s.ptr);
       s.ptr=NULL;
     }   
-
     /* always cleanup */
     curl_easy_cleanup(curl);
-    printf("curlthread end\n");
   }   
+#endif
 
-  //curl_global_cleanup();
+  printf("end thread: %ld, %ld\n", (long)getpid(), (long)getppid());
 
   cli_conn(&pData); 
-  //printf("after thread, mac:%s, fd:%d, client_id:%d\n", pData->mac, pData->fd, pData->client_id);
 }

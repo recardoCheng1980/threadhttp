@@ -1,0 +1,18 @@
+LDFLAGS +=
+CFLAGS += -Wall --std=gnu99
+
+OBJ := common.o simplehttpd.o http_parser.o
+LIB := -Wl,--export-dynamic -L/lib/i386-linux-gnu/ -L./mips/lib -ldl -lcurl
+INCLUDE := -I./mips/include/
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+all: $(OBJ)
+	$(CC) -o uhttpd $(LDFLAGS) $(LIB) $(OBJ)
+
+clean:
+	rm -f *.o *.so uhttpd
+
+romfs:
+	@echo "uhttpd romfs"

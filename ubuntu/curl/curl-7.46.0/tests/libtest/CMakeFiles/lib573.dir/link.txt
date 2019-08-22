@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/lib573.dir/lib573.c.o CMakeFiles/lib573.dir/first.c.o CMakeFiles/lib573.dir/testutil.c.o CMakeFiles/lib573.dir/__/__/lib/warnless.c.o CMakeFiles/lib573.dir/testtrace.c.o  -o lib573 -rdynamic ../../lib/libcurl.so -lidn -llber -lldap -ldl -lssl -lcrypto -lz -Wl,-rpath,/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/lib 

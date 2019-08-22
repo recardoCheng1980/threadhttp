@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/libauthretry.dir/libauthretry.c.o CMakeFiles/libauthretry.dir/first.c.o  -o libauthretry -rdynamic ../../lib/libcurl.so -lidn -llber -lldap -ldl -lssl -lcrypto -lz -Wl,-rpath,/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/lib 

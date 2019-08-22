@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/lib520.dir/lib520.c.o CMakeFiles/lib520.dir/first.c.o  -o lib520 -rdynamic ../../lib/libcurl.so -lidn -llber -lldap -ldl -lssl -lcrypto -lz -Wl,-rpath,/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/lib 

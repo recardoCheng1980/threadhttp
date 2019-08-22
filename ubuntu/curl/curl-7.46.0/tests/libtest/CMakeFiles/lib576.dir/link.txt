@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/lib576.dir/lib576.c.o CMakeFiles/lib576.dir/first.c.o  -o lib576 -rdynamic ../../lib/libcurl.so -lidn -llber -lldap -ldl -lssl -lcrypto -lz -Wl,-rpath,/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/lib 

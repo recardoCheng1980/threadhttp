@@ -1,0 +1,1 @@
+/usr/bin/cc       CMakeFiles/lib555.dir/lib555.c.o CMakeFiles/lib555.dir/first.c.o CMakeFiles/lib555.dir/testutil.c.o CMakeFiles/lib555.dir/__/__/lib/warnless.c.o  -o lib555 -rdynamic ../../lib/libcurl.so -lidn -llber -lldap -ldl -lssl -lcrypto -lz -Wl,-rpath,/home/ubuntu/R1S-MT7621/user/uhttpd/curl/curl-7.46.0/lib 
