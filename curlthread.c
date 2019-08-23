@@ -3,35 +3,6 @@
 #include <sys/un.h>
 #include "curlthread.h"
 
-int execmd(char* result, int len) {
-  FILE *fp=NULL;
-  char cmd[128]={0};
-  char fileName[32]={0};
-
-  snprintf(fileName, sizeof(fileName), "/tmp/uhttpd_log/thread.%d", getpid());
-  snprintf(cmd, sizeof(cmd), "curl -s -o %s http://macauth.chengshihayng.com/macauth", fileName );
-  printf("cmd:%s\n", cmd);
-  int ret=system(cmd);
-  if (ret!=0) {
-    printf("unable to exec curl, ret status:%d\n", ret);
-    return 1;
-  }
-
-  fp=fopen(fileName, "rb");
-  if (fp) {
-    while (!feof(fp)) {
-      int readSize=fread(result, 1, len, fp);
-      if (readSize<0) {
-        printf("unable to read file:%s\n", fileName);
-        fclose(fp);
-        return 1;
-      }
-    }
-    fclose(fp);
-  }
-  return 0;
-}
-
 int cli_conn(threadData* pData)
 {
     char path[] = "/tmp/uds";
@@ -93,6 +64,44 @@ size_t writefunc(void *ptr, size_t size, size_t nmemb, curlString *s)
   return size*nmemb;
 }
 
+int execmd(char* result, int len, char* mac, char* redirect_url) {
+  FILE *fp=NULL;
+  char cmd[128]={0};
+  char fileName[32]={0};
+  char errFileName[32]={0};
+
+/*
+#$1 mac
+#$2 result file name
+#$3 error file name
+#$4 redirect url
+*/
+
+  snprintf(fileName, sizeof(fileName), "/tmp/uhttpd_log/thread.%d", getpid());
+  snprintf(errFileName, sizeof(errFileName), "/tmp/uhttpd_log/errthread.%d", getpid());
+  snprintf(cmd, sizeof(cmd), "./curl.sh %s %s %s %s", mac, fileName, errFileName, redirect_url);
+  printf("cmd:%s\n", cmd);
+  int ret=system(cmd);
+  if (ret!=0) {
+    printf("unable to exec curl, ret status:%d\n", ret);
+    return 1;
+  }
+
+  fp=fopen(fileName, "rb");
+  if (fp) {
+    while (!feof(fp)) {
+      int readSize=fread(result, 1, len, fp);
+      if (readSize<0) {
+        printf("unable to read file:%s\n", fileName);
+        fclose(fp);
+        return 1;
+      }
+    }
+    fclose(fp);
+  }
+  return 0;
+}
+
 void curl_entry(void* param)
 {
   CURL *curl;
@@ -103,9 +112,9 @@ void curl_entry(void* param)
   printf("beg thread: %ld, %ld\n", (long)getpid(), (long)getppid());
   memcpy(&pData, param, sizeof(threadData));
 
-#if 0
+#if 1
   char result[64]={0};
-  ret=execmd(result, sizeof(result));
+  ret=execmd(result, sizeof(result), pData.mac, pData.redirect_url);
   if (ret==0) {
     char *pComma=strstr(result, ",");
     if (pComma!=NULL) {
